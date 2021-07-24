@@ -43,9 +43,11 @@ namespace Planner
             Console.WriteLine($"Owned by {_owner}");
             Console.WriteLine($"{Volume} cubic meters of space");
         }
-        public void Address()
+
+        public void Print()
         {
             Console.WriteLine(_address);
+            Console.WriteLine($"Designed by {_designer}");
         }
     }
 }

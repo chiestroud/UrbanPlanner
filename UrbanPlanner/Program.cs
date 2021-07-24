@@ -53,11 +53,16 @@ namespace UrbanPlanner
             kyoto.AddBuildings("Kyoto Tower");
             kyoto.AddBuildings("Kyoto Second Tower");
             kyoto.WriteCityInfo();
+            kyoto.AddBuilds(ChieEstate);
             foreach(string building in kyoto.Buildings)
             {
                 Console.WriteLine(building);
             }
-     
+            
+            foreach(Building building in kyoto.Builds)
+            {
+                building.Print();
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Planner
         public string Name { get; set; }
         public string Mayor { get; set; }
         public List<string> Buildings { get; set; } = new List<string>();
+        public List<Building> Builds { get; set; } = new List<Building>();
        
         public int YearEstablished { get; set; }
         
@@ -27,6 +28,11 @@ namespace Planner
             Buildings.Add(building);
         }
 
+        public void AddBuilds(Building building)
+        {
+            Builds.Add(building);
+        }
+
         public void WriteCityInfo()
         {
             Console.WriteLine($"Here are the information about {Name}");
@@ -34,7 +40,5 @@ namespace Planner
             Console.WriteLine($"{Name} was build in {YearEstablished}");
             Console.WriteLine($"Famous buildings in {Name} is");
         }
-
-  
     }
 }
