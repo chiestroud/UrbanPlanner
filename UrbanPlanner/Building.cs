@@ -23,6 +23,7 @@ namespace Planner
         private string _address;
         private string _owner;
 
+
         public Building(string address)
         {
             _address = address;
@@ -41,6 +42,10 @@ namespace Planner
             Console.WriteLine($"Constructed on {_dateConstructed}");
             Console.WriteLine($"Owned by {_owner}");
             Console.WriteLine($"{Volume} cubic meters of space");
+        }
+        public void Address()
+        {
+            Console.WriteLine(_address);
         }
     }
 }
