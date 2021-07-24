@@ -1,5 +1,6 @@
 ﻿using Planner;
 using System;
+using System.Collections.Generic;
 
 namespace UrbanPlanner
 {
@@ -7,6 +8,7 @@ namespace UrbanPlanner
     {
         static void Main(string[] args)
         {
+            //Building Info
             Building FiveOneTwoEigth = new Building("512 8th Avenue");
             FiveOneTwoEigth.Width = 150.5;
             FiveOneTwoEigth.Stories = 5;
@@ -33,6 +35,29 @@ namespace UrbanPlanner
             ChieEstate.Construct();
             ChieEstate.Purchase("Chie's Favorite Person");
             Console.WriteLine();
+
+            // City Info
+            City nashville = new City(4000, "Nashville", "Nashville Person" );
+            nashville.AddBuildings("Nashville Building");
+            nashville.AddBuildings("Another Nashville Building");
+
+            nashville.WriteCityInfo();
+            foreach (string building in nashville.Buildings)
+            {
+                Console.WriteLine(building);
+            }
+
+            Console.WriteLine();
+
+            City kyoto = new City(794, "Kyoto", "Kyoto Person");
+            kyoto.AddBuildings("Kyoto Tower");
+            kyoto.AddBuildings("Kyoto Second Tower");
+            kyoto.WriteCityInfo();
+            foreach(string building in kyoto.Buildings)
+            {
+                Console.WriteLine(building);
+            }
+     
         }
     }
 }
