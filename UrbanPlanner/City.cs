@@ -30,7 +30,7 @@ namespace Planner
         public void WriteCityInfo()
         {
             Console.WriteLine($"Here are the information about {Name}");
-            Console.WriteLine($"{Name}' current Mayor is {Mayor}");
+            Console.WriteLine($"{Name}'s current Mayor is {Mayor}");
             Console.WriteLine($"{Name} was build in {YearEstablished}");
             Console.WriteLine($"Famous buildings in {Name} is");
         }
